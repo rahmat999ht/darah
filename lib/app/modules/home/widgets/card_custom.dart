@@ -27,23 +27,24 @@ class CustomCard extends GetView<HomeController> {
             arguments: data,
           );
         },
-        leading: Transform.scale(
-          scale: 1.5,
-          child: Checkbox(
-            shape: const CircleBorder(),
-            onChanged: (v) {
-              for (var element in controller.listDataStokRS) {
-                element.isChecked = false;
-              }
-              controller.listDataStokRS[index].isChecked = true;
-              controller.lat.value = data.rumahSakit.lat;
-              controller.long.value = data.rumahSakit.long;
-              // ignore: invalid_use_of_protected_member
-              controller.refresh();
-            },
-            value: data.isChecked,
-          ),
-        ),
+        // leading: Transform.scale(
+        //   scale: 1.5,
+        //   child:
+          //  Checkbox(
+          //   shape: const CircleBorder(),
+          //   onChanged: (v) {
+          //     for (var element in controller.listDataStokRS) {
+          //       element.isChecked = false;
+          //     }
+          //     controller.listDataStokRS[index].isChecked = true;
+          //     controller.lat.value = data.rumahSakit.lat;
+          //     controller.long.value = data.rumahSakit.long;
+          //     // ignore: invalid_use_of_protected_member
+          //     controller.refresh();
+          //   },
+          //   value: data.isChecked,
+          // ),
+        // ),
         title: Text(
           title,
         ),

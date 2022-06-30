@@ -57,5 +57,5 @@ class LoginController extends GetxController {
     }
   }
 
-  void toRegis() => Get.toNamed(Routes.REGIS);
+  void toRegis() => Get.toNamed(Routes.REGISTER);
 }

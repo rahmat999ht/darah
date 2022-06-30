@@ -18,8 +18,8 @@ class RegisterController extends GetxController {
   final formKeyRegister = GlobalKey<FormState>();
   final nameC = TextEditingController();
   final alamatC = TextEditingController();
-  // final emailC = TextEditingController();
-  // final passC = TextEditingController();
+  final emailC = TextEditingController();
+  final passC = TextEditingController();
 
   // final nameC = TextEditingController(text: "yutyut");
   // final alamatC = TextEditingController(text: "unknow");
@@ -71,8 +71,8 @@ class RegisterController extends GetxController {
           jkl: gender.value == "Laki-Laki" ? "L" : "P",
           almat: alamatC.text,
           golongan: gol.value,
-          // email: emailC.text,
-          // password: passC.text,
+          email: emailC.text,
+          password: passC.text,
           pmiId: pmiId ?? 1,
           type: "user",
         ).toJson(),

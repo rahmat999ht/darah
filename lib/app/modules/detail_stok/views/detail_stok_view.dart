@@ -74,16 +74,16 @@ class DetailStokView extends GetView<DetailStokController> {
                 ),
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                FloatingActionButton.extended(
-                  onPressed: controller.toRegister ,
-                  label: const Text('Donatur'),
-                  icon: const Icon(Icons.add),
-                ),
-              ],
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.end,
+            //   children: [
+            //     FloatingActionButton.extended(
+            //       onPressed: controller.toRegister ,
+            //       label: const Text('Donatur'),
+            //       icon: const Icon(Icons.add),
+            //     ),
+            //   ],
+            // ),
           ],
         ),
       ),

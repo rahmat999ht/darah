@@ -68,20 +68,20 @@ class RegisterView extends GetView<RegisterController> {
               const SizedBox(
                 height: 15,
               ),
-              // TextFormCostum(
-              //   controller: controller.emailC,
-              //   title: 'Email',
-              // ),
-              // const SizedBox(
-              //   height: 15,
-              // ),
-              // TextFormCostum(
-              //   controller: controller.passC,
-              //   title: 'Password',
-              // ),
-              // const SizedBox(
-              //   height: 15,
-              // ),
+              TextFormCostum(
+                controller: controller.emailC,
+                title: 'Email',
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              TextFormCostum(
+                controller: controller.passC,
+                title: 'Password',
+              ),
+              const SizedBox(
+                height: 15,
+              ),
               Obx(() => DropDownButtonCustom(
                     list: controller.listRS.value,
                     value: controller.rs,
@@ -92,7 +92,6 @@ class RegisterView extends GetView<RegisterController> {
               ),
               ElevatedButton(
                 onPressed: () async {
-          
                   await controller.login(context);
                 },
                 child: const Padding(
