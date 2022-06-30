@@ -21,7 +21,7 @@ class RegisView extends GetView<RegisController> {
                 height: 30,
               ),
               const Text(
-                "Register",
+                "Register Donatur",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
