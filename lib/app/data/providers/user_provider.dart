@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:darah/app/data/constants/api.dart';
 import 'package:get/get.dart';
 
@@ -21,10 +19,9 @@ class UserProvider extends GetConnect {
       user.toJsonLogin(),
       // headers: 
     );
-    print(response.body);
     return response.body;
   }
 
-  Future<Response<User>> postUser(User user) async =>  await post('users/',jsonEncode( user.toJson()),decoder: null);
+  // Future<Response<User>> postUser(User user) async =>  await post('users/',jsonEncode( user.toJson()),decoder: null);
   // Future<Response> deleteUser(int id) async => await delete('user/$id');
 }

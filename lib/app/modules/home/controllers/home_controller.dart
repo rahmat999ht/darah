@@ -16,7 +16,7 @@ class HomeController extends GetxController with StateMixin<List<StokRumahSakit>
   final rsProvider = Get.find<RumahSakitProvider>();
   final stokProvider = Get.find<StokDarahProvider>();
 
-  final long = 0.0.obs,lat = 0.0.obs;
+  // final long = 0.0.obs,lat = 0.0.obs;
   @override
   void onInit() async {
     rsListData = await rsProvider.getAllRumahSakit() ?? [];
