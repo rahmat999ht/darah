@@ -4,10 +4,11 @@ class User {
   String? jkl;
   String? email;
   String? password;
-  String? golongan;
+  int? golongan;
   String? type;
   int? pmiId;
   String? almat;
+  String? usia;
   bool? error;
   String? message;
 
@@ -20,7 +21,8 @@ class User {
       this.golongan,
       this.type,
       this.pmiId,
-      this.almat});
+      this.almat,
+      this.usia});
 
   User.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -32,6 +34,7 @@ class User {
     type = json['type'];
     pmiId = json['pmi_id'];
     almat = json['almat'];
+    usia = json['usia'];
     error = json["error"];
     message = json["message"];
   }
@@ -47,6 +50,7 @@ class User {
     data['type'] = type;
     data['pmi_id'] = pmiId;
     data['almat'] = almat;
+    data['usia'] = usia;
     return data;
   }
 

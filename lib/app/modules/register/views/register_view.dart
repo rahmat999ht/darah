@@ -21,7 +21,7 @@ class RegisterView extends GetView<RegisterController> {
                 height: 30,
               ),
               const Text(
-                "Register",
+                "Register Donatur",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -57,6 +57,13 @@ class RegisterView extends GetView<RegisterController> {
                         title: "Golongan"),
                   ),
                 ],
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              TextFormCostum(
+                title: 'Usia',
+                controller: controller.usiaC,
               ),
               const SizedBox(
                 height: 15,

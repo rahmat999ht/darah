@@ -39,9 +39,8 @@ class LoginController extends GetxController {
           password: passC.text,
         ),
       );
-      // print(data);
+      print(data);
       if (data != null) {
-        // ignore: use_build_context_synchronously
         ScaffoldMessenger.of(context).hideCurrentSnackBar();
         Get.offNamed(
           Routes.HOME,
@@ -56,6 +55,5 @@ class LoginController extends GetxController {
       }
     }
   }
-
   void toRegis() => Get.toNamed(Routes.REGISTER);
 }

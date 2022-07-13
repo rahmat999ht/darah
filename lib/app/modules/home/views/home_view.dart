@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-// import 'package:google_maps_flutter/google_maps_flutter.dart';
-
 import '../controllers/home_controller.dart';
 import '../widgets/card_custom.dart';
 
@@ -15,7 +13,7 @@ class HomeView extends GetView<HomeController> {
     // }
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeView'),
+        title: const Text('PMI WILAYAH MAKASSAR'),
         centerTitle: true,
       ),
       body: Column(

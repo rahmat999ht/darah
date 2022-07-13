@@ -1,8 +1,9 @@
 class StokDarah {
   int? id;
-  String? golongan;
+  int? golongan;
   int? stock;
   int? pmiId;
+  String? goldar;
 
   StokDarah({this.id, this.golongan, this.stock, this.pmiId});
 
@@ -11,6 +12,7 @@ class StokDarah {
     golongan = json['golongan'];
     stock = json['stock'];
     pmiId = json['pmi_id'];
+    goldar = json['goldar'];
   }
 
   Map<String, dynamic> toJson() {
@@ -19,6 +21,7 @@ class StokDarah {
     data['golongan'] = golongan;
     data['stock'] = stock;
     data['pmi_id'] = pmiId;
+    data['goldar'] = goldar;
     return data;
   }
 }

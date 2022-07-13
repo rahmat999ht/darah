@@ -4,8 +4,6 @@ import 'package:darah/app/data/providers/rumah_sakit_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:darah/app/routes/app_pages.dart';
-import 'package:get_cli/common/utils/json_serialize/helpers.dart';
-
 import '../../../data/providers/user_provider.dart';
 
 class RegisterController extends GetxController {
@@ -18,6 +16,7 @@ class RegisterController extends GetxController {
   final formKeyRegister = GlobalKey<FormState>();
   final nameC = TextEditingController();
   final alamatC = TextEditingController();
+  final usiaC = TextEditingController();
   final emailC = TextEditingController();
   final passC = TextEditingController();
 
@@ -33,6 +32,7 @@ class RegisterController extends GetxController {
 
   final userProvider = Get.find<UserProvider>();
   final rsProvider = Get.find<RumahSakitProvider>();
+  // final detailProvider = Get.find<StokDarahProvider>();
 
   @override
   void onInit() async {
@@ -64,13 +64,24 @@ class RegisterController extends GetxController {
       // var get_data = await userProvider.get(
       //     'users', User(email: emailC.value, password: passC.value),);
       //     print(get_data);
+      int golId = 1;
+      if (gol.value == "A") {
+        golId = 2;
+      } else if(gol.value == "B") {
+        golId = 3;
+      } else if(gol.value == "AB") {
+        golId = 4;
+      } else if(gol.value == "O") {
+        golId = 1;
+      }
       var data = await userProvider.post(
         'users',
         User(
           name: nameC.text,
           jkl: gender.value == "Laki-Laki" ? "L" : "P",
           almat: alamatC.text,
-          golongan: gol.value,
+          usia: usiaC.text,
+          golongan: golId,
           email: emailC.text,
           password: passC.text,
           pmiId: pmiId ?? 1,
@@ -83,7 +94,7 @@ class RegisterController extends GetxController {
           // ignore: use_build_context_synchronously
           // ScaffoldMessenger.of(context).hideCurrentSnackBar();
           Get.offAllNamed(
-            Routes.DETAIL_STOK,
+            Routes.HOME,
             arguments: data.body as User,
           );
         } else {
@@ -103,5 +114,5 @@ class RegisterController extends GetxController {
     }
   }
 
-  void toLogin() => Get.toNamed(Routes.LOGIN);
+  // void toLogin() => Get.toNamed(Routes.LOGIN);
 }

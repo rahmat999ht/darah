@@ -65,25 +65,25 @@ class LoginView extends GetView<LoginController> {
                   ),
                 ],
               ),
-              Container(
-                margin: const EdgeInsets.only(top: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      'don\'t have an account yet ?',
-                      style: TextStyle(color: Colors.black, fontSize: 15),
-                    ),
-                    TextButton(
-                      onPressed: controller.toRegis,
-                      child: const Text(
-                        ' Register ',
-                        style: TextStyle(color: Colors.blue, fontSize: 15),
-                      ),
-                    ),
-                  ],
-                ),
-              )
+              // Container(
+              //   margin: const EdgeInsets.only(top: 5),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: [
+              //       const Text(
+              //         'don\'t have an account yet ?',
+              //         style: TextStyle(color: Colors.black, fontSize: 15),
+              //       ),
+              //       TextButton(
+              //         onPressed: controller.toRegis,
+              //         child: const Text(
+              //           ' Register ',
+              //           style: TextStyle(color: Colors.blue, fontSize: 15),
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // )
             ],
           ),
         ),

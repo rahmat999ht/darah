@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import '../controllers/detail_stok_controller.dart';
 
 class DetailStokView extends GetView<DetailStokController> {
@@ -35,7 +33,7 @@ class DetailStokView extends GetView<DetailStokController> {
                 itemCount: controller.getStokDarah().length,
                 itemBuilder: (context, index) {
                   var dataStok = controller.getStokDarah()[index].stock;
-                  var dataGolongan = controller.getStokDarah()[index].golongan;
+                  var dataGolongan = controller.getStokDarah()[index].goldar;
                   return Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
@@ -74,16 +72,16 @@ class DetailStokView extends GetView<DetailStokController> {
                 ),
               ),
             ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.end,
-            //   children: [
-            //     FloatingActionButton.extended(
-            //       onPressed: controller.toRegister ,
-            //       label: const Text('Donatur'),
-            //       icon: const Icon(Icons.add),
-            //     ),
-            //   ],
-            // ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                FloatingActionButton.extended(
+                  onPressed: controller.toRegister ,
+                  label: const Text('Donatur'),
+                  icon: const Icon(Icons.add),
+                ),
+              ],
+            ),
           ],
         ),
       ),
